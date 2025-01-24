@@ -127,7 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\Utilities.cs" />
-    <Compile Include="DataModel\AssignBasket.cs" />
+    <Compile Include="DataModel\AssignContainer.cs" />
     <Compile Include="DataModel\AssignProcess.cs" />
     <Compile Include="DataModel\OrderWorker.cs" />
     <Compile Include="DataModel\TimeOff.cs" />
