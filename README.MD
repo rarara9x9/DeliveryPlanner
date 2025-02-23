@@ -7,7 +7,7 @@ MDXQ2024 企業協働プログラム 配送計画作成ツール
 ## 開発環境
 
 * OS:Windows 11 Pro
-* IDE:Visual Studio Community 2024
+* IDE:Visual Studio Community 2022
 
 ## フレームワークなど
 
