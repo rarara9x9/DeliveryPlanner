@@ -1,11 +1,10 @@
 ﻿using ClosedXML.Excel;
+using DeliveryPlanner.GoogleService;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
-using DeliveryPlanner.GoogleService;
-using System.Configuration;
-using DocumentFormat.OpenXml.Drawing.Charts;
 
 namespace DeliveryPlanner.UseCase
 {

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using DeliveryPlanner.ExcelDataModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using ClosedXML.Excel;
-using DeliveryPlanner.ExcelDataModel;
 
 namespace DeliveryPlanner.ExcelDataLoader
 {

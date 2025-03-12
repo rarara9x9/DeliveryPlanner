@@ -1,15 +1,15 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using DeliveryPlanner.Commons;
+using DeliveryPlanner.DataModel;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
 using System;
-using System.IO;
-using System.Threading.Tasks;
-using System.Configuration;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
-using DeliveryPlanner.DataModel;
-using DeliveryPlanner.Commons;
+using System.Threading.Tasks;
 
 namespace DeliveryPlanner.GoogleService
 {
@@ -97,7 +97,7 @@ namespace DeliveryPlanner.GoogleService
                 var dataRows = values.Skip(1).ToList();  // 2行目以降がデータ行
 
                 foreach (var row in dataRows)
-                {                   
+                {
                     if (row[0] != null && row[1] != null && row[5] != null && row[11] != null && row[13] != null &&
                         row[14] != null && row[17] != null && row[20] != null && row[21] != null &&
                         (row[22] == null || string.IsNullOrWhiteSpace(row[22].ToString())) &&
@@ -107,7 +107,7 @@ namespace DeliveryPlanner.GoogleService
                         DateTime.TryParse(row[21].ToString(), out DateTime endDate) &&
                         startDate >= DateTime.Today)
                     {
-                        result.Add(new OrderWorker(row[0].ToString(), row[1].ToString(), row[5].ToString(), containerNo, row[13].ToString(), row[14].ToString(), row[17].ToString(), startDate, endDate)); 
+                        result.Add(new OrderWorker(row[0].ToString(), row[1].ToString(), row[5].ToString(), containerNo, row[13].ToString(), row[14].ToString(), row[17].ToString(), startDate, endDate));
                     }
                 }
             }

@@ -1,16 +1,16 @@
 ﻿using ClosedXML.Excel;
-using DeliveryPlanner.DataModel;
 using DeliveryPlanner.Commons;
+using DeliveryPlanner.DataModel;
 using DeliveryPlanner.ExcelDataLoader;
 using DeliveryPlanner.ExcelDataModel;
+using DeliveryPlanner.GoogleService;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.IO;
-using System.Windows.Forms;
+using System.Linq;
 using System.Threading.Tasks;
-using DeliveryPlanner.GoogleService;
+using System.Windows.Forms;
 
 namespace DeliveryPlanner.UseCase
 {
@@ -224,7 +224,8 @@ namespace DeliveryPlanner.UseCase
                             skipDays.Clear();
                         }
                     }
-                };
+                }
+                ;
 
                 var 割当済コンテナ = await sheetApi.GetOrderWorker();
                 foreach (var orderWorker in 割当済コンテナ)
@@ -301,7 +302,8 @@ namespace DeliveryPlanner.UseCase
                                                      .AssignProcesses.Find(x => x.ProductId == containerProcesse.ProductId && x.ProcessId == containerProcesse.ProcessId);
                     assignProcess.AssignContainers.Add(new AssignContainer(containerProcesse.OrderNumber, containerProcesse.OrderDetailNumber, containerProcesse.ContainerNo, containerProcesse.ProcessSide));
 
-                };
+                }
+                ;
 
                 var writePlanWokers = (from orderWorker in orderWorkers
                                        join order in orders

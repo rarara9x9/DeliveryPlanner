@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace DeliveryPlanner
 {
@@ -87,7 +87,7 @@ namespace DeliveryPlanner
             // 保存とリロード
             config.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
-            
+
             this.Close();
         }
 

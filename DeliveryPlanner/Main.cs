@@ -1,9 +1,9 @@
-﻿using System;
-using System.Configuration;
-using System.Windows.Forms;
+﻿using DeliveryPlanner.Commons;
 using DeliveryPlanner.UseCase;
-using DeliveryPlanner.Commons;
+using System;
+using System.Configuration;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace DeliveryPlanner
 {

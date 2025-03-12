@@ -17,7 +17,7 @@ namespace DeliveryPlanner.ExcelDataModel
             WorkerId = workerId ?? throw new ArgumentNullException(nameof(workerId));
             WorkerName = workerName ?? throw new ArgumentNullException(nameof(workerName));
             DeliveryOrder = deliveryOrder > 0 ? deliveryOrder : throw new ArgumentOutOfRangeException(nameof(deliveryOrder), "配送順は正の整数である必要があります。");
-            MaxContainer = maxContainer.Count == 7  ? maxContainer : throw new ArgumentOutOfRangeException(nameof(maxContainer), "最大数(コンテナ/日)は7である必要があります。");
+            MaxContainer = maxContainer.Count == 7 ? maxContainer : throw new ArgumentOutOfRangeException(nameof(maxContainer), "最大数(コンテナ/日)は7である必要があります。");
         }
 
         // オーバーライド（デバッグや表示用）
