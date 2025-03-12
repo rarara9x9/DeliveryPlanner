@@ -120,32 +120,9 @@ namespace DeliveryPlanner.UseCase
                                           record.OrderDetailNumber,
                                           record.ProductId,
                                           ContainerNo = i,
-                                          ItemCount = (record.Quantity > (record.ContainerSplitCount * i)) ? record.ContainerSplitCount : (record.Quantity - record.ContainerSplitCount * (i - 1))
+                                          ItemCount = (record.Quantity > (record.ContainerSplitCount * i)) ? record.ContainerSplitCount : (record.Quantity - record.ContainerSplitCount * (i - 1)),
+                                          ProcessSide = "左右"
                                       });
-                                  })
-                                  .SelectMany(item =>
-                                  {
-                                      return new[]
-                                  {
-                                        new
-                                        {
-                                            item.OrderNumber,
-                                            item.OrderDetailNumber,
-                                            item.ProductId,
-                                            item.ContainerNo,
-                                            item.ItemCount,
-                                            ProcessSide = "右"
-                                        },
-                                        new
-                                        {
-                                            item.OrderNumber,
-                                            item.OrderDetailNumber,
-                                            item.ProductId,
-                                            item.ContainerNo,
-                                            item.ItemCount,
-                                            ProcessSide = "左"
-                                        }
-                                    };
                                   });
 
                 var containerProcesses = (from order in orders
