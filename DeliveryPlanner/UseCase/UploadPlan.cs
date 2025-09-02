@@ -155,8 +155,8 @@ namespace DeliveryPlanner.UseCase
                                         row.Cell(11).GetValue<string>(),
                                         $"=MINIFS('{T_生産計画表}'!$U$2:$U{lastPlanIndex},'{T_生産計画表}'!$A$2:$A{lastPlanIndex},$A{index},'{T_生産計画表}'!$B$2:$B{lastPlanIndex},$B{index})",
                                         $"=MAXIFS('{T_生産計画表}'!$V$2:$V{lastPlanIndex},'{T_生産計画表}'!$A$2:$A{lastPlanIndex},$A{index},'{T_生産計画表}'!$B$2:$B{lastPlanIndex},$B{index})",
-                                        $"=MAXIFS('{T_生産計画表}'!$X$2:$X{lastPlanIndex},'{T_生産計画表}'!$A$2:$A{lastPlanIndex},$A{index},'{T_生産計画表}'!$B$2:$B{lastPlanIndex},$B{index},'{T_生産計画表}'!$N$2:$N{lastPlanIndex},\"左\",'{T_生産計画表}'!$Q$2:$Q{lastPlanIndex},99,'{T_生産計画表}'!$Y$2:$Y{lastPlanIndex},\"回収済\")",
-                                        $"=MAXIFS('{T_生産計画表}'!$M$2:$M{lastPlanIndex},'{T_生産計画表}'!$A$2:$A{lastPlanIndex},$A{index},'{T_生産計画表}'!$B$2:$B{lastPlanIndex},$B{index},'{T_生産計画表}'!$N$2:$N{lastPlanIndex},\"左\",'{T_生産計画表}'!$Q$2:$Q{lastPlanIndex},99,'{T_生産計画表}'!$Y$2:$Y{lastPlanIndex},\"回収済\")"
+                                        $"=MAXIFS('{T_生産計画表}'!$X$2:$X{lastPlanIndex},'{T_生産計画表}'!$A$2:$A{lastPlanIndex},$A{index},'{T_生産計画表}'!$B$2:$B{lastPlanIndex},$B{index},'{T_生産計画表}'!$N$2:$N{lastPlanIndex},\"左右\",'{T_生産計画表}'!$Q$2:$Q{lastPlanIndex},99,'{T_生産計画表}'!$Y$2:$Y{lastPlanIndex},\"回収済\")",
+                                        $"=MAXIFS('{T_生産計画表}'!$M$2:$M{lastPlanIndex},'{T_生産計画表}'!$A$2:$A{lastPlanIndex},$A{index},'{T_生産計画表}'!$B$2:$B{lastPlanIndex},$B{index},'{T_生産計画表}'!$N$2:$N{lastPlanIndex},\"左右\",'{T_生産計画表}'!$Q$2:$Q{lastPlanIndex},99,'{T_生産計画表}'!$Y$2:$Y{lastPlanIndex},\"回収済\")"
                                     });
                                 ++index;
                             }
